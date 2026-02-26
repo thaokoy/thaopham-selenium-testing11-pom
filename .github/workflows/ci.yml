@@ -21,7 +21,7 @@ jobs:
 
         with:
           distribution: temurin    # temurin là nhà cung cấp JDK Java
-          java-vision: "21"
+          java-vesion: "21"
           cache: maven     # cache những dependency đã cài trước đó giúp chạy nhanh hơn ở những lần sau
       - name: Run maven tests
         run: mvn -B test
