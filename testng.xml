@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--các loại paralel test case-->
+<!--1: methods: chạy song song các test case bên trong class-->
+<!--VD: song song testLoginSuccess và testLoginFail trong class LoginTest-->
+
+<!--2: classes-->
+<!--chạy test song song các class test-->
+<!--VD: LoginTest, DashboardTest, AdminTest-->
+<!--trong từng class test thì các test case nhỏ sẽ chạy tuần tự-->
+
+<!--3: test block-->
+<suite name="Selenium POM pattern"
+        parallel="tests"
+       thread-count="2">
+    <test name="Login Tests">
+        <classes>
+            <class name="tests.LoginTest"></class>
+        </classes>
+    </test>
+
+    <test name="Dashboard Tests">
+        <classes>
+            <class name="tests.DashboardTest"></class>
+        </classes>
+    </test>
+
+</suite>
